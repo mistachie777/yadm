@@ -1,0 +1,35 @@
+[KFileDialog Settings]
+Recent Files[$e]=start.svg,file:///usr/share/plasma/desktoptheme/Arc-Dark/icons/start.svg
+Recent URLs[$e]=file:///usr/share/plasma/desktoptheme/Arc-Dark/icons/
+
+[Open-with settings]
+CompletionMode=1
+History=ksys,sys
+
+[PlasmaRunnerManager]
+LaunchCounts=2 services_kvantummanager.desktop,1 baloosearch_/home/daniel/Documents/_Research/Reports/ADSP_ACT.pptx,1 services_chrome-oooiobdokpcfdlahlmcddobejikcmkfo-Default.desktop,1 services_org.kde.partitionmanager.desktop,1 services_systemsettings.desktop
+pluginWhiteList=services,desktopsessions,PowerDevil,shell,bookmarks,baloosearch,locations
+
+[ScreenConnectors]
+10=DP-2
+11=eDP-1
+12=HDMI-2
+13=DP-1
+14=Screen28
+15=Screen26
+16=Screen27
+
+[UniversalSettings]
+canDisableBorders=false
+currentLayout=Plasma
+downloadWindowSize=800,550
+lastNonAssignedLayout=Plasma
+launchers=
+layoutsColumnWidths=97,59,71,0
+layoutsWindowSize=700,617
+memoryUsage=0
+mouseSensitivity=2
+screenTrackerInterval=2500
+showInfoWindow=true
+unifiedGlobalShortcuts=true
+version=2
