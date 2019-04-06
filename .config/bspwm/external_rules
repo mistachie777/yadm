@@ -1,0 +1,28 @@
+#! /usr/bin/bash
+
+fwid=$(bspc query -N -n focused.automatic)
+
+echo "$1 $(xwinfo -c $1) $(xwinfo -t $1)" >> /tmp/wm_id
+win_name=$(xtitle $1)
+win_class=$(xprop -id $1 WM_CLASS)
+
+if [[ $win_name == *"Desktop"* && $win_name == *"Plasma"* && $(echo $win_class | grep -c "plasmashell" ) ]]; then
+    xdotool windowclose $(printf '%d' $1)
+    #echo "hidden=on"
+fi
+
+if [ -n "$fwid" ] ; then
+    wattr wh $fwid | {
+        read width height
+        if [ $width -gt $height ] ; then
+            echo "split_dir=east"
+        else
+            echo "split_dir=north"
+        fi
+        echo "split_ratio=0.5"
+    }
+fi
+
+[ "$(xwinfo -t $1)" = "dialog" ] && echo "state=floating"
+[ "$(xwinfo -t $1)" = "splash" ] && echo "state=floating"
+#[ "$(xwinfo -t $1)" = "normal" ] && echo "state=tiled"
